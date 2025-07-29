@@ -26,29 +26,28 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
   - ConstraintLayout
 ---
 
+
 ## 📂 Project Structure
 
-📦 to-do-list-android
-┣ 📂 app
-┃ ┣ 📂 src
-┃ ┃ ┣ 📂 main
-┃ ┃ ┃ ┣ 📂 java/com/example/to_dolist
-┃ ┃ ┃ ┃ ┣ 📜 MainActivity.java
-┃ ┃ ┃ ┃ ┣ 📜 Viewing.java
-┃ ┃ ┃ ┃ ┣ 📜 UpdateActivity.java
-┃ ┃ ┃ ┃ ┣ 📜 AdditionActivity.java
-┃ ┃ ┃ ┃ ┣ 📜 DeletionActivity.java
-┃ ┃ ┃ ┃ ┣ 📜 Adapter.java
-┃ ┃ ┃ ┃ ┣ 📜 Model.java
-┃ ┃ ┃ ┃ ┗ 📜 Database.java
-┃ ┃ ┃ ┣ 📂 res/layout
-┃ ┃ ┃ ┃ ┣ 📜 activity_main.xml
-┃ ┃ ┃ ┃ ┣ 📜 activity_update.xml
-┃ ┃ ┃ ┃ ┣ 📜 activity_viewing.xml
-┃ ┃ ┃ ┃ ┗ 📜 card.xml
-┃ ┃ ┃ ┗ 📜 AndroidManifest.xml
-┃ ┗ 📜 build.gradle
-┗ 📜 README.md
+- **app/**
+  - **src/main/**
+    - **java/com/example/to_dolist/**
+      - `MainActivity.java` – Main screen with buttons for all actions.
+      - `Viewing.java` – Displays all tasks in a RecyclerView.
+      - `UpdateActivity.java` – Updates tasks by ID.
+      - `AdditionActivity.java` – Adds new tasks.
+      - `DeletionActivity.java` – Deletes tasks by ID.
+      - `Adapter.java` – RecyclerView adapter for displaying tasks.
+      - `Model.java` – Data model class for a task.
+      - `Database.java` – SQLite database helper class.
+    - **res/layout/**
+      - `activity_main.xml` – Layout for the main screen.
+      - `activity_update.xml` – Layout for the update screen.
+      - `activity_viewing.xml` – Layout for the viewing screen.
+      - `card.xml` – Layout for individual RecyclerView items.
+    - `AndroidManifest.xml` – App manifest file.
+  - `build.gradle` – App build configuration.
+- `README.md` – Project documentation.
 ---
 
 ## 🚀 How to Run
