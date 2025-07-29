@@ -12,10 +12,12 @@
         android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="16dp"
         android:text="Hello into our application"
         android:textColor="#000000"
         android:textSize="34sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +27,14 @@
         android:id="@+id/tvIntro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
         android:text="We know that this is your first time and it will not be the last"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvWelcome"
+        app:layout_constraintStart_toStartOf="@+id/tvWelcome"
         app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
 
     <TextView
@@ -44,7 +46,7 @@
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvIntro" />
+        app:layout_constraintEnd_toEndOf="@+id/tvIntro"
+        app:layout_constraintStart_toStartOf="@+id/tvIntro"
+        app:layout_constraintTop_toBottomOf="@+id/tvIntro" />
 </androidx.constraintlayout.widget.ConstraintLayout>
