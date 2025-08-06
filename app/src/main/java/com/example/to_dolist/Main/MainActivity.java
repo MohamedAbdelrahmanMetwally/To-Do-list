@@ -1,15 +1,16 @@
-package com.example.to_dolist;
+package com.example.to_dolist.Main;
 import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.to_dolist.Database;
+import com.example.to_dolist.R;
+
 public class MainActivity extends AppCompatActivity {
     private Database database;
     @SuppressLint("MissingInflatedId")
