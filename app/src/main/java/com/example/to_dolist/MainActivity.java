@@ -23,19 +23,5 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        database = new Database(this);
-        SharedPreferences sharedPreferences = getSharedPreferences("my_preferences", MODE_PRIVATE);
-        if (sharedPreferences.getBoolean("first_run", true)) {
-            startActivity(new Intent(this, Greeting.class));
-            sharedPreferences.edit().putBoolean("first_run", false).apply();
-        }
-        initButton(R.id.btnAdd, AdditionActivity.class);
-        initButton(R.id.btnUpdate, UpdateActivity.class);
-        initButton(R.id.btnDelete, DeletionActivity.class);
-        initButton(R.id.btnView, Viewing.class);
-    }
-    private void initButton(int buttonId, Class<?> targetActivity) {
-        Button button = findViewById(buttonId);
-        button.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, targetActivity)));
     }
 }
