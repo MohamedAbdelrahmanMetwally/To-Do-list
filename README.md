@@ -32,41 +32,40 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
 
 
 ## 📂 Project Structure
-
-app/
-├─ src/
-│ └─ main/
-│ ├─ java/
-│ │ └─ com/
-│ │ └─ example/
-│ │ └─ to_dolist/
-│ │ ├─ Main/
-│ │ │ ├─ ui/
-│ │ │ │ └─ MainActivity.java
-│ │ │ ├─ utils/
-│ │ │ │ ├─ Repository.java
-│ │ │ │ ├─ TaskAdapter.java
-│ │ │ │ └─ MainViewModelFactory.java
-│ │ │ └─ viewmodel/
-│ │ │ └─ MainViewModel.java
-│ │ └─ core/
-│ │ └─ database/
-│ │ ├─ Task.java
-│ │ ├─ TaskDatabase.java
-│ │ └─ SharedPref.java
+**app**/
+├─ **src**/
+│ └─ **main**/
+│ ├─ **java**/
+│ │ └─ **com**/
+│ │ └─ **example**/
+│ │ └─ **to_dolist**/
+│ │ ├─ **Main**/
+│ │ │ ├─ **ui**/
+│ │ │ │ └─** MainActivity.java**
+│ │ │ ├─ **utils**/
+│ │ │ │ ├─ **Repository.java**
+│ │ │ │ ├─ **TaskAdapter.java**
+│ │ │ │ └─ **MainViewModelFactory.java**
+│ │ │ └─** viewmodel/**
+│ │ │ └─** MainViewModel.java**
+│ │ └─ **core/**
+│ │ └─ **database/**
+│ │ ├─ **Task.java**
+│ │ ├─ **TaskDatabase.java**
+│ │ └─** SharedPref.java**
 │ │
-│ ├─ res/
-│ │ ├─ layout/
-│ │ │ ├─ activity_main.xml
-│ │ │ ├─ item_task.xml
-│ │ │ └─ dialog_add_edit_task.xml
-│ │ └─ values/
-│ │ └─ strings.xml
+│ ├─ **res/**
+│ │ ├─ **layout/**
+│ │ │ ├─ **activity_main.xml**
+│ │ │ ├─ **item_task.xml**
+│ │ │ └─ **dialog_add_edit_task.xml**
+│ │ └─ **values/**
+│ │ └─ **strings.xml**
 │ │
-│ └─ AndroidManifest.xml
+│ └─** AndroidManifest.xml**
 │
-├─ build.gradle
-└─ README.md
+├─ **build.gradle**
+└─ **README.md**
 ---
 
 ## 🚀 How to Run
