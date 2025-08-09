@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
+import java.util.List;
+
 public class TaskDatabase extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "tasks.db";
     private static final int DATABASE_VERSION = 1;
@@ -46,8 +48,8 @@ public class TaskDatabase extends SQLiteOpenHelper {
             return db.delete(TABLE_TASKS, COLUMN_ID + "=?", new String[]{String.valueOf(id)});
         }
     }
-    public ArrayList<Task> getAllTasks() {
-        ArrayList<Task> tasks = new ArrayList<>();
+    public List<Task> getAllTasks() {
+        List<Task> tasks = new ArrayList<>();
         String query = "SELECT * FROM " + TABLE_TASKS;
         try (SQLiteDatabase db = this.getReadableDatabase();
              Cursor cursor = db.rawQuery(query, null)) {

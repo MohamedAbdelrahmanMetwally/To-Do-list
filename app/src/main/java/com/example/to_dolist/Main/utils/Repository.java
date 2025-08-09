@@ -9,22 +9,40 @@ import java.util.List;
 
 public class Repository {
     private  TaskDatabase taskDatabase;
+    private final MutableLiveData<List<Task>> tasksLiveData = new MutableLiveData<>();
     public Repository(TaskDatabase taskDatabase) {
         this.taskDatabase = taskDatabase;
+        loadTasks();
+    }
+    private void loadTasks() {
+        List<Task> tasks = taskDatabase.getAllTasks();
+        tasksLiveData.setValue(tasks);
     }
     public long addTask(String title) {
-        return taskDatabase.addTask(title);
+        if(taskDatabase.addTask(title)>0){
+            loadTasks();
+            return 1;
+        }else{
+            return 0;
+        }
     }
     public int updateTask(int id, String title) {
-        return taskDatabase.updateTask(id, title);
+        if(taskDatabase.updateTask(id,title)>0){
+            loadTasks();
+            return 1;
+        }else{
+            return 0;
+        }
     }
     public int deleteTask(int id) {
-        return taskDatabase.deleteTask(id);
+        if(taskDatabase.deleteTask(id)>0){
+            loadTasks();
+            return 1;
+        }else{
+            return 0;
+        }
     }
-    public LiveData<ArrayList<Task>> getAllTasks() {
-        MutableLiveData<ArrayList<Task>> liveTasks = new MutableLiveData<>();
-        ArrayList<Task> tasks = taskDatabase.getAllTasks();
-        liveTasks.setValue(tasks);
-        return liveTasks;
+    public LiveData<List<Task>> getAllTasks() {
+        return tasksLiveData;
     }
 }
