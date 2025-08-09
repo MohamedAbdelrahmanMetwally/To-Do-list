@@ -11,6 +11,7 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
 - 📋 **View** all tasks in an elegant list using RecyclerView.
 - 💾 Store data locally using SQLite.
 - 🎨 Simple and modern UI design with Material Design and CardView.
+- MVVM architecture
 
 ---
 
@@ -19,6 +20,9 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
 - **Database:**
 - SQLite
 - Shared prefrences
+- MVVM architecture
+- Live data
+- Data binding
 - **UI Design:** XML + Material Design
 - **Android Libraries:**
   - RecyclerView
@@ -29,25 +33,40 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
 
 ## 📂 Project Structure
 
-- **app/**
-  - **src/main/**
-    - **java/com/example/to_dolist/**
-      - `MainActivity.java` – Main screen with buttons for all actions.
-      - `Viewing.java` – Displays all tasks in a RecyclerView.
-      - `UpdateActivity.java` – Updates tasks by ID.
-      - `AdditionActivity.java` – Adds new tasks.
-      - `DeletionActivity.java` – Deletes tasks by ID.
-      - `Adapter.java` – RecyclerView adapter for displaying tasks.
-      - `Model.java` – Data model class for a task.
-      - `Database.java` – SQLite database helper class.
-    - **res/layout/**
-      - `activity_main.xml` – Layout for the main screen.
-      - `activity_update.xml` – Layout for the update screen.
-      - `activity_viewing.xml` – Layout for the viewing screen.
-      - `card.xml` – Layout for individual RecyclerView items.
-    - `AndroidManifest.xml` – App manifest file.
-  - `build.gradle` – App build configuration.
-- `README.md` – Project documentation.
+app/
+├─ src/
+│ └─ main/
+│ ├─ java/
+│ │ └─ com/
+│ │ └─ example/
+│ │ └─ to_dolist/
+│ │ ├─ Main/
+│ │ │ ├─ ui/
+│ │ │ │ └─ MainActivity.java
+│ │ │ ├─ utils/
+│ │ │ │ ├─ Repository.java
+│ │ │ │ ├─ TaskAdapter.java
+│ │ │ │ └─ MainViewModelFactory.java
+│ │ │ └─ viewmodel/
+│ │ │ └─ MainViewModel.java
+│ │ └─ core/
+│ │ └─ database/
+│ │ ├─ Task.java
+│ │ ├─ TaskDatabase.java
+│ │ └─ SharedPref.java
+│ │
+│ ├─ res/
+│ │ ├─ layout/
+│ │ │ ├─ activity_main.xml
+│ │ │ ├─ item_task.xml
+│ │ │ └─ dialog_add_edit_task.xml
+│ │ └─ values/
+│ │ └─ strings.xml
+│ │
+│ └─ AndroidManifest.xml
+│
+├─ build.gradle
+└─ README.md
 ---
 
 ## 🚀 How to Run
@@ -59,7 +78,9 @@ A simple Android application for managing daily tasks (Add, Update, Delete, View
 
 ## 📌 Notes
 - Works completely **offline**.
-- Can be extended to support **Firebase** or any cloud-based storage.
+- Can be extended to support **Firebase** or any cloud-based storage
+- Can be extended to have tasks sorted by shared prefrences
+- Can be extended to change the light mode into night mode by Shared prefrences also.
 
 ---
 
